@@ -15,6 +15,9 @@
   <h1>Questo è il testo</h1>
   <p><?php echo $testo ?></p>
 
+  <h3>Quanti caratteri ha?</h3>
+  <p><?php echo $lunghezzaTesto ?> parole</p>
+
   
 </body>
 </html>
