@@ -1,6 +1,9 @@
 <?php
   $testo = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
-  $lunghezzaTesto = strlen("$testo");
+  
+  $censura = $_GET['inserisci'];
+  $testoCensurato = str_replace($censura,"***",$testo);
+  
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,12 @@
   <p><?php echo $testo ?></p>
 
   <h3>Quanti caratteri ha?</h3>
-  <p><?php echo $lunghezzaTesto ?> parole</p>
+  <p><?php echo strlen($testo) ?> parole</p>
+
+  <h1>Questo è il testo CENSURATO</h1>
+  <p><?php echo $testoCensurato ?></p>
+  <p><?php echo strlen($testoCensurato) ?> parole</p>
+
 
   
 </body>
